@@ -1,4 +1,4 @@
-modulejs.define("people.index", function() {
+modulejs.define("people.index", ["routes"], function(routes) {
   return function() {
     "use strict";
 
@@ -9,7 +9,7 @@ modulejs.define("people.index", function() {
       var promise;
 
       btnLoad.attr("disabled", "disabled");
-      promise = $.get("/people.json");
+      promise = $.get(routes.people_path({"format": "json"}));
 
       promise.done(function(data) {
         var html = "";
@@ -19,9 +19,9 @@ modulejs.define("people.index", function() {
             name: person.name,
             state: person.state,
             country: person.country,
-            show_url: "/people/" + person.id,
-            edit_url: "/people/" + person.id + "/edit",
-            destroy_url: "/people/" + person.id
+            show_url: routes.person_path(person.id),
+            edit_url: routes.edit_person_path(person.id),
+            destroy_url: routes.person_path(person.id)
           });
         });
 
