@@ -2,6 +2,9 @@
 
 <h1>Listing People</h1>
 
+<button id="load">Load people</button>
+<br /><br />
+
 <table>
   <thead>
     <tr>
@@ -13,16 +16,6 @@
   </thead>
 
   <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.name %></td>
-        <td><%= person.state %></td>
-        <td><%= person.country %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
   </tbody>
 </table>
 
