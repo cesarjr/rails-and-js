@@ -1,3 +1,5 @@
 //= require jquery
 //= require jquery-ujs
-//= require_tree .
+//= require modulejs
+//= require_tree ./views/
+//= require boot
