@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery-ujs
+//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require modulejs
 //= require js-routes
 //= require routes

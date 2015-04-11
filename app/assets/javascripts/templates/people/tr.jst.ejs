@@ -2,7 +2,11 @@
   <td><%= name %></td>
   <td><%= state %></td>
   <td><%= country %></td>
-  <td><a href="<%= show_url %>">Show</a></td>
-  <td><a href="<%= edit_url %>">Edit</a></td>
-  <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="<%= destroy_url %>">Destroy</a></td>
+  <td>
+    <div class="pull-right">
+      <a class="btn btn-default btn-xs" href="<%= show_url %>">Show</a>
+      <a class="btn btn-default btn-xs" href="<%= edit_url %>">Edit</a>
+      <a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="<%= destroy_url %>">Destroy</a>
+    </div>
+  </td>
 </tr>
